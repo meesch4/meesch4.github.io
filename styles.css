@@ -29,6 +29,11 @@ ul {
 
   a {
     display: block;
-    padding: 8px;
-    background-color: #dddddd;
+    padding: 4px;
+    background-color: #c4ffde;
   } 
+
+  main {
+    background-color: #c4ffde;
+    padding: 20px;
+  }
