@@ -21,9 +21,9 @@
           </nav>
     </header>
     <main style="text-align: center;">
-        <div id="about">
+        <div id="about" style="margin-top: 5%;">
             <div class="container-fluid">
-                <h3>neil.dev</h3>
+                <h3 id="typing"></h3>
                 <p>Soon to be home of random bullshit</p>
                 <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
                 <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
@@ -36,3 +36,33 @@
         </div>
     </main>
 </body>
+
+
+
+<!-- Scripts -->
+<script>
+    const text = "neil.dev";
+    let index = 0;
+    function typeEffect() {
+        if (index < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 100);
+        } else {
+            addBlinkingCursor();
+        }
+    }
+
+    function addBlinkingCursor() {
+        const typingElement = document.getElementById("typing");
+        const cursor = document.createElement("span");
+        cursor.id = "cursor";
+        cursor.textContent = "|";
+        typingElement.appendChild(cursor);
+
+        setInterval(() => {
+            cursor.style.visibility = cursor.style.visibility === "hidden" ? "visible" : "hidden";
+        }, 500);
+    }
+    typeEffect();
+</script>
