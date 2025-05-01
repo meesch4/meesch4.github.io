@@ -30,3 +30,8 @@ a {
     height: 30%;
     padding: 20px;
   }
+
+  #vantajs {
+    width: 100%; 
+    height:100dvh;
+  }

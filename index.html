@@ -4,8 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neil's Site</title>
     <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <!-- Scripts imports -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="javascript/three.min.js"></script>
+    <script src="javascript/vanta.birds.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,32 +18,34 @@
                 <div class="nav nav-underline">
                   <a class="nav-link active" aria-current="page" href="#about">About</a>
                   <a class="nav-link" href="experience.html">Experience</a>
-                  <a class="nav-link disabled" aria-disabled="true"   href="dawgz.html">Dawgz</a>
+                  <a class="nav-link disabled" aria-disabled="true" href="dawgz.html">Dawgz</a>
                 </div>
             </div>
           </nav>
     </header>
-    <main style="text-align: center;">
-        <div id="about" style="margin-top: 2%;">
-            <div class="container-fluid">
-                <h3 id="typing"></h3>
-                <p>Soon to be home of random bullshit</p>
-                <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                <p>Under construction. Men at work.</p>
-                <span></span>
+    <div class="content">
+        <main style="text-align: center;">
+            <div id="about" style="margin-top: 2%;">
+                <div class="container-fluid">   
+                    <h3 id="typing"></h3>
+                    <p>Soon to be home of random bullshit</p>
+                    <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
+                    <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
+                    <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
+                    <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
+                    <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
+                    <p>Under construction. Men at work.</p>
+                    <span></span>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
+    <div id="vantajs"></div>
 </body>
-
-
 
 <!-- Scripts -->
 <script>
+    // Typewriter effect for the text "neil.dev"
     const text = "neil.dev";
     let index = 0;
     function typeEffect() {
@@ -53,6 +58,7 @@
         }
     }
 
+    // Function to add a blinking cursor
     function addBlinkingCursor() {
         const typingElement = document.getElementById("typing");
         const cursor = document.createElement("span");
@@ -65,4 +71,24 @@
         }, 500);
     }
     typeEffect();
+
+    // Animated background VANTA.BIRDS
+    document.addEventListener("DOMContentLoaded", () => {
+        VANTA.BIRDS({
+            el: "#vantajs",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 500.00,
+            minWidth: 500.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0xc4ffde,
+            color1: 0xabe8c,
+            color2: 0x4748e,
+            colorMode: "lerpGradient",
+            separation: 26.00,
+            backgroundAlpha: 0.84
+        });
+    });
 </script>
