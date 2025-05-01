@@ -8,10 +8,6 @@
     text-decoration: none;
   }
 
-  p {
-    margin: 0;
-  }
-
   ul li {
     list-style-type: georgian;
     margin: 0;
@@ -23,5 +19,6 @@
     padding: 20px;
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    margin-top: 50%; 
+    margin-bottom: 50%;
   }
