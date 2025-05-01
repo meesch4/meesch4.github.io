@@ -8,17 +8,20 @@
     text-decoration: none;
   }
 
-  p + ul {
-    margin-top: 0; /* Remove the top margin of the <ul> following a <p> */
+  p {
+    margin: 0;
   }
 
-  p {
-    margin-bottom: 0; /* Remove the bottom margin of the <p> */
+  ul li {
+    list-style-type: georgian;
+    margin: 0;
+    padding: 0; 
   }
 
   main {
     background-color: #c4ffde;
     padding: 20px;
     margin: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   }
