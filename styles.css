@@ -1,39 +1,24 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
+  a {
+    display: inline-block;
+    padding-right: 4px;
+  } 
 
-  li {
-    float: left;
-    border-right: 1px solid #bbb;
-  }
-
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+  a:hover {
+    color: #cccccc;
     text-decoration: none;
   }
-  
-  li:last-child {
-    border-right: none;
+
+  p + ul {
+    margin-top: 0; /* Remove the top margin of the <ul> following a <p> */
   }
 
-  li a:hover {
-    background-color: #333;
+  p {
+    margin-bottom: 0; /* Remove the bottom margin of the <p> */
   }
-
-  a {
-    display: block;
-    padding: 4px;
-    background-color: #c4ffde;
-  } 
 
   main {
     background-color: #c4ffde;
     padding: 20px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
