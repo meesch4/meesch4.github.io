@@ -9,10 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="javascript/three.min.js"></script>
     <script src="javascript/vanta.birds.min.js"></script>
+    <script src="javascript/animations.js>"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
-        <nav class="nav bg-body-tertiary bg-body-tertiary">
+        <nav class="nav bg-body-tertiary bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
                 <div class="navbar-brand"></div>
                 <div class="nav nav-underline">
@@ -41,6 +43,7 @@
                 </div>
             </main>
         </div>
+        <!-- Vanta.js background-->
         <div id="vantajs"></div>
     </div>
 </body>
@@ -88,7 +91,7 @@
             backgroundColor: 0xc4ffde,
             color1: 0xabe8c,
             color2: 0x4748e,
-            colorMode: "lerpGradient",
+            colorMode: "variance",
             separation: 100.00,
             alignment: 1.00,
             cohesion: 1.00,
