@@ -47,6 +47,15 @@ main {
   text-align: center; /* Center-align text */
 }
 
+/* Rectangle shape for desktop screens */
+@media (min-width: 1024px) {
+    main {
+        height: 400px; /* Fixed height for rectangle */
+        width: 500px;
+        margin:auto;
+    }
+}
+
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   main {
