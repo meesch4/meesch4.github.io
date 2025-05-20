@@ -7,18 +7,20 @@
     z-index: 100;
   }
 
-  #vantajs {
-    width: 100%; 
-    height:100dvh;
-    position: absolute;
-    z-index: -100;
-  }
 
-  body {
-    background-color: rgb(228, 228, 228);
-  }
+  header {
+    position: fixed; /* Fix the header at the top of the page */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it span the full width of the page */
+    z-index: 2; /* Ensure it stays above other elements */
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
 
-  main {
+
+
+  /* main {
     background-color: #f0f3f1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position:fixed;
@@ -29,46 +31,63 @@
     width: 50%;
     height: 30%;
     padding: 20px;
-  }
+    font-size: 16px;
+    line-height: 1.5;
+  } */
 
-  /* General styles for <main> */
+
+
+body {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the body spans the full viewport height */
+  margin: 0; /* Remove default margin */
+  background-color: rgb(228, 228, 228); /* Keep your background color */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Style the <main> element */
 main {
+  background-color: rgba(240, 243, 241, 0.9); /* Semi-transparent background for readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+  width: 90%; /* Use a percentage for responsive width */
+  max-width: 800px; /* Limit the width on larger screens */
   padding: 20px;
   font-size: 16px;
   line-height: 1.5;
+  border-radius: 8px; /* Optional: Add rounded corners */
+  position: relative; /* Ensure it stays above the Vanta.js background */
+  z-index: 1; /* Bring it above the background */
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-  main {
-      padding: 10px; /* Reduce padding for smaller screens */
-      font-size: 14px; /* Adjust font size for readability */
-      text-align: center; /* Center-align text for better layout */
-  }
+    main {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Adjust font size for readability */
+        text-align: center; /* Center-align text for better layout */
+    }
 
-  main .container-fluid {
-      margin-top: 2%; /* Adjust margin for better spacing */
-  }
+    ul {
+        padding-left: 20px; /* Add padding for list items */
+    }
 
-  ul {
-      padding-left: 20px; /* Add padding for list items */
-  }
-
-  ul li {
-      font-size: 14px; /* Adjust list item font size */
-  }
+    ul li {
+        font-size: 14px; /* Adjust list item font size */
+    }
 }
 
 /* Responsive styles for very small screens (e.g., phones) */
 @media (max-width: 480px) {
-  main {
-      padding: 5px; /* Further reduce padding */
-      font-size: 12px; /* Smaller font size for very small screens */
-  }
+    main {
+        padding: 5px; /* Further reduce padding */
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
 
-  ul li {
-      font-size: 12px; /* Adjust list item font size */
-  }
+    ul li {
+        font-size: 12px; /* Adjust list item font size */
+    }
 }
 
 
@@ -87,4 +106,14 @@ main {
     margin: 0;
     padding: 0; 
   }
+
+  /* Ensure the Vanta.js background is behind everything */
+#vantajs {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  position: absolute; /* Position it behind other elements */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Send it to the back */
+}
 
