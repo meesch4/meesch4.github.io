@@ -31,6 +31,46 @@
     padding: 20px;
   }
 
+  /* General styles for <main> */
+main {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  main {
+      padding: 10px; /* Reduce padding for smaller screens */
+      font-size: 14px; /* Adjust font size for readability */
+      text-align: center; /* Center-align text for better layout */
+  }
+
+  main .container-fluid {
+      margin-top: 2%; /* Adjust margin for better spacing */
+  }
+
+  ul {
+      padding-left: 20px; /* Add padding for list items */
+  }
+
+  ul li {
+      font-size: 14px; /* Adjust list item font size */
+  }
+}
+
+/* Responsive styles for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+  main {
+      padding: 5px; /* Further reduce padding */
+      font-size: 12px; /* Smaller font size for very small screens */
+  }
+
+  ul li {
+      font-size: 12px; /* Adjust list item font size */
+  }
+}
+
 
   a {
     display: inline-block;
