@@ -26,24 +26,9 @@
     </header>
     <div class="wrapper">
         <div class="content">
-            <!-- <main style="text-align: center;">
-                <div id="about" style="margin-top: 2%;">
-                    <div class="container-fluid">   
-                        <h3 id="typing"></h3>
-                        <p>Soon to be home of random bullshit</p>
-                        <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                        <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                        <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                        <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                        <img src="images/glooba.jpg" alt="Glooba" class="img-fluid" width="100px" height="100px">
-                        <p>Under construction. Men at work.</p>
-                        <span></span>
-                    </div>
-                </div>
-            </main> -->
             <main style="text-align: left;">
                 <div class="container-fluid" style="margin-top: 1%;">
-                    <h3 id="typing"></h3>
+                    <h3 id="typing" style="margin-bottom: 5px;"></h3>
                     <p style="margin-bottom: 5px;"> 
                         3.5+ years experience as <b>SWE</b> @ <b>MITRE</b><br>
                         B.S. in Computer Science from <b>Texas A&M University</b><br>
@@ -87,18 +72,6 @@
 
 <!-- Scripts -->
 <script>
-    // Typewriter effect for the text "neil.dev"
-    // const text = "neil.dev";
-    // let index = 0;
-    // function typeEffect() {
-    //     if (index < text.length) {
-    //         document.getElementById("typing").innerHTML += text.charAt(index);
-    //         index++;
-    //         setTimeout(typeEffect, 100);
-    //     } else {
-    //         addBlinkingCursor();
-    //     }
-    // }
     // Typewriter effect
     const text = "Software Engineer";
     let index = 0;
@@ -132,7 +105,7 @@
             el: "#vantajs",
             mouseControls: true,
             touchControls: true,
-            gyroControls: false,
+            gyroControls: true,
             minHeight: 500.00,
             minWidth: 500.00,
             scale: 1.00,
@@ -144,7 +117,8 @@
             separation: 100.00,
             alignment: 1.00,
             cohesion: 1.00,
-            backgroundAlpha: 0.84
+            backgroundAlpha: 0.84,
+            quantity: 5
         });
     });
 </script>
