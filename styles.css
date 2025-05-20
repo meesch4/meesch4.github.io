@@ -1,41 +1,21 @@
-  * {
-    overflow:hidden
-  }
-
-  #content {
-    position: relative;
-    z-index: 100;
-  }
-
-
-  header {
-    position: fixed; /* Fix the header at the top of the page */
-    top: 0; /* Align it to the top */
-    left: 0; /* Align it to the left */
-    width: 100%; /* Make it span the full width of the page */
-    z-index: 2; /* Ensure it stays above other elements */
-    background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a semi-transparent background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+* {
+  overflow:hidden
 }
 
+#content {
+  position: relative;
+  z-index: 100;
+}
 
-
-  /* main {
-    background-color: #f0f3f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position:fixed;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 30%;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-  } */
-
-
+header {
+  position: fixed; /* Fix the header at the top of the page */
+  top: 0; /* Align it to the top */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Make it span the full width of the page */
+  z-index: 2; /* Ensure it stays above other elements */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
 
 body {
   display: flex; /* Enable Flexbox */
@@ -47,8 +27,12 @@ body {
   overflow: hidden; /* Prevent scrolling */
 }
 
-/* Style the <main> element */
+/* Center the main content for all screens */
 main {
+  display: flex; /* Use Flexbox for centering */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   background-color: rgba(240, 243, 241, 0.9); /* Semi-transparent background for readability */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
   width: 90%; /* Use a percentage for responsive width */
@@ -59,53 +43,54 @@ main {
   border-radius: 8px; /* Optional: Add rounded corners */
   position: relative; /* Ensure it stays above the Vanta.js background */
   z-index: 1; /* Bring it above the background */
+  margin: 20px auto; /* Center horizontally with auto margins */
+  text-align: center; /* Center-align text */
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-    main {
-        padding: 10px; /* Reduce padding for smaller screens */
-        font-size: 14px; /* Adjust font size for readability */
-        text-align: center; /* Center-align text for better layout */
-    }
+  main {
+      padding: 10px; /* Reduce padding for smaller screens */
+      font-size: 14px; /* Adjust font size for readability */
+  }
 
-    ul {
-        padding-left: 20px; /* Add padding for list items */
-    }
+  ul {
+      padding-left: 0; /* Remove unnecessary padding for lists */
+  }
 
-    ul li {
-        font-size: 14px; /* Adjust list item font size */
-    }
+  ul li {
+      text-align: left; /* Align list items to the left for better readability */
+      font-size: 14px;
+  }
 }
 
 /* Responsive styles for very small screens (e.g., phones) */
 @media (max-width: 480px) {
-    main {
-        padding: 5px; /* Further reduce padding */
-        font-size: 12px; /* Smaller font size for very small screens */
-    }
-
-    ul li {
-        font-size: 12px; /* Adjust list item font size */
-    }
-}
-
-
-  a {
-    display: inline-block;
-    padding-right: 10px;
-  } 
-
-  a:hover {
-    color: #cccccc;
-    text-decoration: none;
+  main {
+      padding: 5px; /* Further reduce padding */
+      font-size: 12px; /* Smaller font size for very small screens */
   }
 
   ul li {
-    list-style-type: georgian;
-    margin: 0;
-    padding: 0; 
+      font-size: 12px; /* Adjust list item font size */
   }
+}
+
+a {
+  display: inline-block;
+  padding-right: 10px;
+} 
+
+a:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: georgian;
+  margin: 0;
+  padding: 0; 
+}
 
   /* Ensure the Vanta.js background is behind everything */
 #vantajs {
