@@ -50,7 +50,7 @@ main {
 /* Rectangle shape for desktop screens */
 @media (min-width: 1024px) {
     main {
-        height: 400px; /* Fixed height for rectangle */
+        height: 350px; /* Fixed height for rectangle */
         width: 500px;
         margin:auto;
     }
